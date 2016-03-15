@@ -1,0 +1,58 @@
+/* libraries */
+@import "bourbon/bourbon"; /* sass mixins */
+@import "base/base"; /* base styles */
+
+
+
+body {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background: $dark-gray;
+}
+
+.socialLinks {
+    @include display(flex);
+    @include align-items(center);
+    @include justify-content(center);
+    @include flex-wrap(wrap);
+
+    > li {
+      padding: $base-spacing;
+      position: relative;
+      > a {
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+        @include transition(all 0.5s ease-in-out);
+        background: lighten($dark-gray, 10%);
+        color: lighten($dark-gray, 40%);
+        border-radius: 50%;
+        font-size: 2.5em;
+        line-height: 1;
+        height: 120px;
+        width: 120px;
+        &:hover {
+            @include transition(all 0.5s ease-in-out);
+            font-size: 5em;
+            background: $light-gray;
+            color: $dark-gray;
+            height: 240px;
+            width: 240px;
+        }
+
+      }
+    }
+  }
+
+
+
+
+
+
+
+
+
