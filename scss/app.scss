@@ -6,47 +6,185 @@
 
 body {
     @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
     margin: 0;
     padding: 0;
     height: 100vh;
-    background: $dark-gray;
+    background: lighten(black, 3%);
+
+    @media only screen and (min-width: 960px) {
+        @include align-items(center);
+        @include justify-content(center);
+    }
 }
 
-.socialLinks {
-    @include display(flex);
-    @include align-items(center);
-    @include justify-content(center);
-    @include flex-wrap(wrap);
 
-    > li {
-      padding: $base-spacing;
-      position: relative;
-      > a {
+.card {
+    @include flex(1);
+    @include display(flex);
+    background: black;
+    max-width: 960px;
+    background-image: url("../images/hex_bg_nogap.png");
+    background-size: cover;
+
+    @media only screen and (min-width: 960px) {
+        width: 960px;
+        height: 560px;
+        background-color: black;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+        background-image: none;
+    }
+    
+    .links {
+        @include flex(none);
+        @include display(flex);
+        text-align: center;
+        background-color: transparentize(lighten(black, 10%), 0.05);
+        padding: 1.5em;
+
+        > ul {
+           @include display(flex);
+           @include align-items(center);
+           @include flex-direction(column);
+           @include justify-content(space-around);
+
+           > li {
+
+                line-height: 1;
+                text-align: center;
+
+               > a {
+                    font-size: 4.25em;
+                    line-height: 1;
+                    color: #4d4d4d;
+
+                    transition: all .2s ease-in-out;
+
+                    &:hover {
+                      color: $medium-gray;
+                    }
+
+                    @media only screen and (max-height: 480px) {
+                        font-size: 2.5em;
+                    }
+
+                    @media only screen and (max-width: 480px) {
+                        font-size: 2.5em;
+                    }
+                }
+             }
+
+            @media only screen and (min-width: 960px) {
+                > li {
+                    position: absolute;
+                    padding: 0;
+                    margin: 0;
+                    line-height: 1;
+
+                    &:first-child {
+                        top: 111px;
+                        left: 76px;
+                    }
+
+                    &:nth-child(2) {
+                        top: 222px;
+                        left: 295px;
+                    }
+
+                    &:nth-child(3) {
+                        top: 111px;
+                        left: 480px;
+                    }
+
+                    &:nth-child(4) {
+                        top: 340px;
+                        left: 87px;
+                    }
+
+                    &:nth-child(5) {
+                        top: 340px;
+                        left: 480px;
+                    }
+
+                    > a {
+                        font-size: 4.25em;
+                        line-height: 1;
+                        color: $dark-gray;
+
+                        transition: all .2s ease-in-out;
+
+                        &:hover {
+                            color: $medium-gray;
+                        }
+                    }
+                }
+            }
+
+        }
+
+        @media only screen and (min-width: 479px) {
+            padding: 1.5em 3em;
+        }
+
+        @media only screen and (min-width: 960px) {
+            @include flex(1 1 67%);
+
+            position: relative;
+            width: 67%;
+            background-size: cover;
+            background-color: black;
+            padding: 1.5em;
+
+            background-image: url("../images/hex_bg.png");
+        }
+    }
+
+    .image {
+
+        @include flex(1);
         @include display(flex);
         @include align-items(center);
         @include justify-content(center);
-        @include transition(all 0.5s ease-in-out);
-        background: lighten($dark-gray, 10%);
-        color: lighten($dark-gray, 40%);
-        border-radius: 50%;
-        font-size: 2.5em;
-        line-height: 1;
-        height: 120px;
-        width: 120px;
-        &:hover {
-            @include transition(all 0.5s ease-in-out);
-            font-size: 5em;
-            background: $light-gray;
-            color: $dark-gray;
-            height: 240px;
-            width: 240px;
+        padding: 1.5rem;
+
+        background-color: rgba(0, 0, 0, 0.5);
+
+        
+        
+
+        img {
+            max-height: calc(100vh - 3rem);
+            //width: 100%;
         }
 
-      }
+        @media only screen and (min-width: 960px) {
+            @include flex(none);
+            @include display(flex);
+            @include justify-content(center);
+            @include align-items(center);
+            padding: 1.5rem;
+            width: 33%;
+
+            background-image: none;
+        }
     }
-  }
+            
+    
+
+        
+
+        
+
+        
+    
+
+    
+}
+
+
+
+
+
 
 
 

@@ -249,31 +249,42 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
   margin: 0;
   padding: 0;
   height: 100vh;
-  background: #333;
+  background: #080808;
+}
+@media only screen and (min-width: 960px) {
+  body {
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+  }
 }
 
-.socialLinks {
+.card {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -281,37 +292,163 @@ body {
   display: -moz-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-  -moz-box-align: center;
-  box-align: center;
-  -webkit-align-items: center;
-  -moz-align-items: center;
-  -ms-align-items: center;
-  -o-align-items: center;
-  align-items: center;
-  -ms-flex-align: center;
-  -webkit-box-pack: center;
-  -moz-box-pack: center;
-  box-pack: center;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  -ms-justify-content: center;
-  -o-justify-content: center;
-  justify-content: center;
-  -ms-flex-pack: center;
-  -webkit-box-lines: multiple;
-  -moz-box-lines: multiple;
-  box-lines: multiple;
-  -webkit-flex-wrap: wrap;
-  -moz-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+  background: black;
+  max-width: 960px;
+  background-image: url("../images/hex_bg_nogap.png");
+  background-size: cover;
 }
-.socialLinks > li {
+@media only screen and (min-width: 960px) {
+  .card {
+    width: 960px;
+    height: 560px;
+    background-color: black;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    background-image: none;
+  }
+}
+.card .links {
+  -webkit-box-flex: none;
+  -moz-box-flex: none;
+  box-flex: none;
+  -webkit-flex: none;
+  -moz-flex: none;
+  -ms-flex: none;
+  flex: none;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  background-color: rgba(26, 26, 26, 0.95);
   padding: 1.5em;
-  position: relative;
 }
-.socialLinks > li > a {
+.card .links > ul {
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  box-align: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  -o-align-items: center;
+  align-items: center;
+  -ms-flex-align: center;
+  -webkit-box-orient: vertical;
+  -moz-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  -webkit-box-pack: distribute;
+  -moz-box-pack: distribute;
+  box-pack: distribute;
+  -webkit-justify-content: space-around;
+  -moz-justify-content: space-around;
+  -ms-justify-content: space-around;
+  -o-justify-content: space-around;
+  justify-content: space-around;
+  -ms-flex-pack: distribute;
+}
+.card .links > ul > li {
+  line-height: 1;
+  text-align: center;
+}
+.card .links > ul > li > a {
+  font-size: 4.25em;
+  line-height: 1;
+  color: #4d4d4d;
+  transition: all .2s ease-in-out;
+}
+.card .links > ul > li > a:hover {
+  color: #999;
+}
+@media only screen and (max-height: 480px) {
+  .card .links > ul > li > a {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .card .links > ul > li > a {
+    font-size: 2.5em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .card .links > ul > li {
+    position: absolute;
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+  }
+  .card .links > ul > li:first-child {
+    top: 111px;
+    left: 76px;
+  }
+  .card .links > ul > li:nth-child(2) {
+    top: 222px;
+    left: 295px;
+  }
+  .card .links > ul > li:nth-child(3) {
+    top: 111px;
+    left: 480px;
+  }
+  .card .links > ul > li:nth-child(4) {
+    top: 340px;
+    left: 87px;
+  }
+  .card .links > ul > li:nth-child(5) {
+    top: 340px;
+    left: 480px;
+  }
+  .card .links > ul > li > a {
+    font-size: 4.25em;
+    line-height: 1;
+    color: #333;
+    transition: all .2s ease-in-out;
+  }
+  .card .links > ul > li > a:hover {
+    color: #999;
+  }
+}
+@media only screen and (min-width: 479px) {
+  .card .links {
+    padding: 1.5em 3em;
+  }
+}
+@media only screen and (min-width: 960px) {
+  .card .links {
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+    box-flex: 1;
+    -webkit-flex: 1 1 67%;
+    -moz-flex: 1 1 67%;
+    -ms-flex: 1 1 67%;
+    flex: 1 1 67%;
+    position: relative;
+    width: 67%;
+    background-size: cover;
+    background-color: black;
+    padding: 1.5em;
+    background-image: url("../images/hex_bg.png");
+  }
+}
+.card .image {
+  -webkit-box-flex: 1;
+  -moz-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -337,24 +474,48 @@ body {
   -o-justify-content: center;
   justify-content: center;
   -ms-flex-pack: center;
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  background: #4d4d4d;
-  color: #999999;
-  border-radius: 50%;
-  font-size: 2.5em;
-  line-height: 1;
-  height: 120px;
-  width: 120px;
+  padding: 1.5rem;
+  background-color: rgba(0, 0, 0, 0.5);
 }
-.socialLinks > li > a:hover {
-  -webkit-transition: all 0.5s ease-in-out;
-  -moz-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-  font-size: 5em;
-  background: #DDD;
-  color: #333;
-  height: 240px;
-  width: 240px;
+.card .image img {
+  max-height: calc(100vh - 3rem);
+}
+@media only screen and (min-width: 960px) {
+  .card .image {
+    -webkit-box-flex: none;
+    -moz-box-flex: none;
+    box-flex: none;
+    -webkit-flex: none;
+    -moz-flex: none;
+    -ms-flex: none;
+    flex: none;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    box-pack: center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+    -o-justify-content: center;
+    justify-content: center;
+    -ms-flex-pack: center;
+    -webkit-box-align: center;
+    -moz-box-align: center;
+    box-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    -ms-align-items: center;
+    -o-align-items: center;
+    align-items: center;
+    -ms-flex-align: center;
+    padding: 1.5rem;
+    width: 33%;
+    background-image: none;
+  }
 }
