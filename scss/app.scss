@@ -79,7 +79,7 @@ body {
                             color: $extra-light-gray;
                         }
 
-                        &:visited {
+                        &:link, &:visited {
                             color: $medium-gray;
                         }
 
