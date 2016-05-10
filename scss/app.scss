@@ -67,6 +67,10 @@ body {
                         color: $medium-gray;
                         padding: .5em 1em; 
 
+                        &:link, &:visited {
+                            color: $medium-gray;
+                        }
+
                         &:hover {
                             color: $extra-light-gray;
 
@@ -77,10 +81,6 @@ body {
 
                         &:active {
                             color: $extra-light-gray;
-                        }
-
-                        &:link, &:visited {
-                            color: $medium-gray;
                         }
 
                         &.is-active {

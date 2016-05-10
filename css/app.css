@@ -341,6 +341,9 @@ body > header > nav > ul > li > a {
   color: #999;
   padding: .5em 1em;
 }
+body > header > nav > ul > li > a:link, body > header > nav > ul > li > a:visited {
+  color: #999;
+}
 body > header > nav > ul > li > a:hover {
   color: #f7f7f7;
 }
@@ -349,9 +352,6 @@ body > header > nav > ul > li > a:hover i {
 }
 body > header > nav > ul > li > a:active {
   color: #f7f7f7;
-}
-body > header > nav > ul > li > a:visited {
-  color: #999;
 }
 body > header > nav > ul > li > a.is-active {
   color: #f7f7f7;
