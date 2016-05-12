@@ -257,7 +257,7 @@ body {
         }
 
         &.video {
-            margin-top: 3em + $small-spacing;
+            margin-top: 3em;
             margin-right: 0;
             margin-left: 0;
 
@@ -292,14 +292,32 @@ body {
             //@include display(flex);
             //@include flex-wrap(wrap);
 
+            .shows-poster {
+                margin-bottom: $small-spacing;
+
+                a {
+                    display: block;
+
+                    img {
+                        display: block;
+                    }
+                }
+            }
+
             .event {
                 box-sizing: border-box;
-                margin-bottom: $small-spacing;
+                padding-bottom: $small-spacing;
+
+                &:last-child {
+                    margin-bottom: 0;
+                    padding-bottom: 0;
+                }
 
                 .event-card {
                     border-radius: $base-border-radius;
                     @include display(flex);
                     @include flex(1);
+                    @include align-items(center);
                     background: $light-gray;
                     padding: $small-spacing;
                 }
@@ -307,26 +325,20 @@ body {
                 .event-date {
                     @include display(flex);
                     @include flex-direction(column);
-                    //width: 5em;
+                    @include justify-content(flex-start);
+                    @include align-items(center);
                     width: 3.5em;
-                    //@include justify-content(flex-start);
-                    @include align-items(center);
-                    @include align-content(center);
                     text-align: center;
-                    @include align-items(center);
-                    //padding: 0 $base-spacing;
-                    //padding: 0 $small-spacing/2;
                     padding-right: $base-spacing;
                 }
 
                 .event-month {
-                    @include flex(none);
                     text-transform: uppercase;
                     font-weight: bold;
                 }
 
                 .event-day {
-                    @include flex(none);
+                    //@include flex(none);
                     //font-size: 5em;
                     line-height: 1;
                     color: $medium-gray;
@@ -342,18 +354,18 @@ body {
                 }
 
                 @media screen and (min-width: 1280px) {
-                    @include flex(0 0 50%);
-                    margin-bottom: $base-spacing;
+                    //@include flex(0 0 50%);
+                    //margin-bottom: $base-spacing;
 
                     &:nth-child(2n) {
-                        padding-left: $base-spacing;
+                        //padding-left: $base-spacing;
                     }
 
                     .event-card {
                         padding: $base-spacing;
-                        @include flex(1);
-                        @include justify-content(stretch);
-                        @include align-items(stretch);
+                        //@include flex(1);
+                        //@include justify-content(stretch);
+                        //@include align-items(stretch);
                     }
 
                     .event-date {
@@ -380,14 +392,58 @@ body {
                 margin: $base-spacing*2 auto;
             }
 
-            @media screen and (min-width: 1280px) {
+            @media screen and (min-width: 1024px) {
                 @include display(flex);
                 @include flex-wrap(wrap);
                 @include flex(1);
+
+                .shows-poster, .shows-cards {
+                    box-sizing: border-box;
+                    width: 50%;
+                    @include flex(0 0 50%);
+                }
+
+                .shows-poster {
+                    padding-bottom: 0;
+                    margin-bottom: 0;
+
+                    a {
+                        display: block;
+                    }
+
+                    img {
+                        display: block;
+                    }
+                }
+
+                .shows-cards {
+                    padding-left: $small-spacing;
+
+                    @include display(flex);
+                    @include flex-direction(column);
+
+                    .event {
+                        @include display(flex);
+                        @include flex(1);
+                        padding-bottom: $small-spacing;
+
+                        &:last-child {
+                            padding-bottom: 0;
+                        }
+                    }
+                }
+            }
+
+            @media screen and (min-width: 1280px) {
+                .shows-cards {
+                    padding-left: $base-spacing;
+
+                    .event {
+                        padding-bottom: $base-spacing;
+                    }
+                }
             }
         }
-
-        
     }
 
     > footer {
