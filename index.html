@@ -195,7 +195,12 @@
       var player;
       function onYouTubeIframeAPIReady() {
         player = new YT.Player('player', {
-          videoId: 'nsvFVW8N7Pg',
+          //videoId: 'nsvFVW8N7Pg',
+          playerVars: 
+          {
+            listType:'playlist',
+            list: 'PL460vMy_R1uuQ3tuwnWqS_WGAGRvwsneW'
+          },
           events: {
             'onReady': onPlayerReady,
             'onStateChange': onPlayerStateChange
