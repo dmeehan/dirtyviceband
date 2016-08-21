@@ -399,8 +399,9 @@ body {
 
                 .shows-poster, .shows-cards {
                     box-sizing: border-box;
-                    width: 50%;
-                    @include flex(0 0 50%);
+                    width: 100%;
+                    //@include flex(0 0 50%);
+
                 }
 
                 .shows-poster {
@@ -417,18 +418,23 @@ body {
                 }
 
                 .shows-cards {
-                    padding-left: $small-spacing;
+                    //padding-left: $small-spacing;
+
 
                     @include display(flex);
-                    @include flex-direction(column);
+                    //@include flex-direction(column);
 
                     .event {
                         @include display(flex);
                         @include flex(1);
-                        padding-bottom: $small-spacing;
+                        //padding-bottom: $small-spacing;
+                        padding-right: $small-spacing;
+                        padding-bottom: 0;
+                        margin-bottom: 0;
 
                         &:last-child {
-                            padding-bottom: 0;
+                            //padding-bottom: 0;
+                            padding-right: 0;
                         }
                     }
                 }
@@ -436,10 +442,10 @@ body {
 
             @media screen and (min-width: 1280px) {
                 .shows-cards {
-                    padding-left: $base-spacing;
+                    //padding-left: $base-spacing;
 
                     .event {
-                        padding-bottom: $base-spacing;
+                        //padding-bottom: $base-spacing;
                     }
                 }
             }
