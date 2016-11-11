@@ -292,6 +292,12 @@ body {
             //@include display(flex);
             //@include flex-wrap(wrap);
 
+            h2 {
+                color: $light-gray;
+                text-transform: uppercase;
+                padding-bottom: $small-spacing;
+            }
+
             .shows-poster {
                 margin-bottom: $small-spacing;
 
@@ -302,6 +308,10 @@ body {
                         display: block;
                     }
                 }
+            }
+
+            .shows-cards {
+                margin-bottom: $base-spacing;
             }
 
             .event {
@@ -422,11 +432,12 @@ body {
 
 
                     @include display(flex);
+                    @include flex-wrap(wrap);
                     //@include flex-direction(column);
 
                     .event {
                         @include display(flex);
-                        @include flex(1);
+                        @include flex(1 0 33%);
                         //padding-bottom: $small-spacing;
                         padding-right: $small-spacing;
                         padding-bottom: 0;
