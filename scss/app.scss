@@ -295,7 +295,12 @@ body {
             h2 {
                 color: $light-gray;
                 text-transform: uppercase;
-                padding-bottom: $small-spacing;
+                padding: $small-spacing 0;
+                font-size: 1em;
+
+                &:first-child {
+                    padding-top: 0;
+                }
             }
 
             .shows-poster {
@@ -311,7 +316,7 @@ body {
             }
 
             .shows-cards {
-                margin-bottom: $base-spacing;
+                margin-bottom: $small-spacing;
             }
 
             .event {

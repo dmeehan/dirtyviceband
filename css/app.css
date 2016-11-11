@@ -660,7 +660,11 @@ body > section.shows {
 body > section.shows h2 {
   color: #DDD;
   text-transform: uppercase;
-  padding-bottom: 0.75em;
+  padding: 0.75em 0;
+  font-size: 1em;
+}
+body > section.shows h2:first-child {
+  padding-top: 0;
 }
 body > section.shows .shows-poster {
   margin-bottom: 0.75em;
@@ -672,7 +676,7 @@ body > section.shows .shows-poster a img {
   display: block;
 }
 body > section.shows .shows-cards {
-  margin-bottom: 1.5em;
+  margin-bottom: 0.75em;
 }
 body > section.shows .event {
   box-sizing: border-box;
