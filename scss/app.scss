@@ -335,6 +335,7 @@ body {
                     @include align-items(center);
                     background: $light-gray;
                     padding: $small-spacing;
+                    //background: darken($light-gray, 20%) !important;
                 }
 
                 .event-date {
@@ -401,6 +402,15 @@ body {
 
 
                 }
+            }
+
+            .shows-cards--past {
+                .event {
+                    .event-card {
+                        background: darken($light-gray, 15%) !important;
+                    }
+                }
+                
             }
 
             @media screen and (min-width: 1280px) {

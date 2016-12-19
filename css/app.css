@@ -785,6 +785,9 @@ body > section.shows .event .event-details h1 {
     margin-bottom: 0.375em;
   }
 }
+body > section.shows .shows-cards--past .event .event-card {
+  background: #b7b7b7 !important;
+}
 @media screen and (min-width: 1280px) {
   body > section.shows {
     margin: 3em auto;
