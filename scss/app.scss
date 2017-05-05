@@ -332,7 +332,7 @@ body {
                     border-radius: $base-border-radius;
                     @include display(flex);
                     @include flex(1);
-                    @include align-items(center);
+                    @include align-items(flex-start);
                     background: $light-gray;
                     padding: $small-spacing;
                     //background: darken($light-gray, 20%) !important;
