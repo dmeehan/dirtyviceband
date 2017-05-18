@@ -702,15 +702,15 @@ body > section.shows .event .event-card {
   -moz-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  -webkit-box-align: start;
-  -moz-box-align: start;
-  box-align: start;
-  -webkit-align-items: flex-start;
-  -moz-align-items: flex-start;
-  -ms-align-items: flex-start;
-  -o-align-items: flex-start;
-  align-items: flex-start;
-  -ms-flex-align: start;
+  -webkit-box-align: flex-sta;
+  -moz-box-align: flex-sta;
+  box-align: flex-sta;
+  -webkit-align-items: flex-sta;
+  -moz-align-items: flex-sta;
+  -ms-align-items: flex-sta;
+  -o-align-items: flex-sta;
+  align-items: flex-sta;
+  -ms-flex-align: flex-sta;
   background: #DDD;
   padding: 0.75em;
 }
