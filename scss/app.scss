@@ -3,7 +3,8 @@
 @import "base/base"; /* base styles */
 
 body {
-    background: #2B2B2B;
+    //background: #2B2B2B;
+    background: $dvb-navy-blue;
     margin: 0;
     padding: 0;
     //overflow: hidden;
@@ -16,7 +17,8 @@ body {
         width: 100%;
         z-index: 10;
         padding: $small-spacing;
-        background: #1A1A1A;
+        //background: #1A1A1A;
+        background: shade($dvb-navy-blue, 30%);
 
         @media screen and (min-width: 768px) {
             padding: $base-spacing/1.5 $base-spacing;
@@ -85,7 +87,7 @@ body {
 
                         &.is-active {
                             color: $extra-light-gray;
-                            background: #2B2B2B;
+                            background: transparentize(white, 0.8);
                             border-radius: .25em;
                         }
                     }
@@ -99,7 +101,7 @@ body {
                     overflow: hidden;
                     width: 100%;
                     @include transition(all .25s ease-in-out);
-                    background: transparentize(#1a1a1a, 0.15);
+                    //background: transparentize(#1a1a1a, 0.15);
                     padding: $small-spacing;
 
                     > li {
@@ -199,7 +201,8 @@ body {
         &.about {
             margin: $small-spacing 0;
             margin-bottom: 0;
-            background: $light-gray;
+            //background: $light-gray;
+            background: #F1F1E6;
             padding-bottom: 3.5rem;
 
             .about-bio {
@@ -329,11 +332,12 @@ body {
                 }
 
                 .event-card {
-                    border-radius: $base-border-radius;
+                    //border-radius: $base-border-radius;
                     @include display(flex);
                     @include flex(1);
                     @include align-items(flex-sta);
-                    background: $light-gray;
+                    //background: $light-gray;
+                    background: #F1F1E6;
                     padding: $small-spacing;
                     //background: darken($light-gray, 20%) !important;
                 }
@@ -358,7 +362,7 @@ body {
                     //font-size: 5em;
                     line-height: 1;
                     color: $medium-gray;
-                    font-size: 3.5em;
+                    font-size: 3em;
                 }
 
                 .event-details {
@@ -389,13 +393,13 @@ body {
                     }
 
                     .event-day {
-                        font-size: 5em;
+                        font-size: 4em;
                     }
 
                     .event-details {
                         font-size: 1em;
                         h1 {
-                            font-size: 1.5rem;
+                            font-size: 1.3125rem;
                             margin-bottom: $small-spacing/2;
                         }
                     }

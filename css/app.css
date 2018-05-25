@@ -242,7 +242,7 @@ picture {
 
 /* base styles */
 body {
-  background: #2B2B2B;
+  background: #00303c;
   margin: 0;
   padding: 0;
 }
@@ -254,7 +254,7 @@ body > header {
   width: 100%;
   z-index: 10;
   padding: 0.75em;
-  background: #1A1A1A;
+  background: #00222a;
 }
 @media screen and (min-width: 768px) {
   body > header {
@@ -355,7 +355,7 @@ body > header > nav > ul > li > a:active {
 }
 body > header > nav > ul > li > a.is-active {
   color: #f7f7f7;
-  background: #2B2B2B;
+  background: rgba(255, 255, 255, 0.2);
   border-radius: .25em;
 }
 body > header > nav > ul.section-links {
@@ -368,7 +368,6 @@ body > header > nav > ul.section-links {
   -webkit-transition: all 0.25s ease-in-out;
   -moz-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
-  background: rgba(26, 26, 26, 0.85);
   padding: 0.75em;
 }
 body > header > nav > ul.section-links > li {
@@ -528,7 +527,7 @@ body > section > h2 {
 body > section.about {
   margin: 0.75em 0;
   margin-bottom: 0;
-  background: #DDD;
+  background: #F1F1E6;
   padding-bottom: 3.5rem;
 }
 body > section.about .about-bio {
@@ -687,7 +686,6 @@ body > section.shows .event:last-child {
   padding-bottom: 0;
 }
 body > section.shows .event .event-card {
-  border-radius: 3px;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -711,7 +709,7 @@ body > section.shows .event .event-card {
   -o-align-items: flex-sta;
   align-items: flex-sta;
   -ms-flex-align: flex-sta;
-  background: #DDD;
+  background: #F1F1E6;
   padding: 0.75em;
 }
 body > section.shows .event .event-date {
@@ -758,7 +756,7 @@ body > section.shows .event .event-month {
 body > section.shows .event .event-day {
   line-height: 1;
   color: #999;
-  font-size: 3.5em;
+  font-size: 3em;
 }
 body > section.shows .event .event-details {
   font-size: 0.875em;
@@ -775,13 +773,13 @@ body > section.shows .event .event-details h1 {
     width: 5em;
   }
   body > section.shows .event .event-day {
-    font-size: 5em;
+    font-size: 4em;
   }
   body > section.shows .event .event-details {
     font-size: 1em;
   }
   body > section.shows .event .event-details h1 {
-    font-size: 1.5rem;
+    font-size: 1.3125rem;
     margin-bottom: 0.375em;
   }
 }
