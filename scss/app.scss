@@ -101,7 +101,7 @@ body {
                     overflow: hidden;
                     width: 100%;
                     @include transition(all .25s ease-in-out);
-                    //background: transparentize(#1a1a1a, 0.15);
+                    background: transparentize($dvb_navy_blue, 0.05);
                     padding: $small-spacing;
 
                     > li {
@@ -114,6 +114,7 @@ body {
                         @include justify-content(flex-end);
                         margin: 0 $base-spacing;
                         @include display(flex);
+                        background: transparent;
                     }
 
                     @media screen and (min-width: 1024px) {
