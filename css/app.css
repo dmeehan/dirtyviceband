@@ -821,7 +821,6 @@ body > section.shows .shows-cards--past .event .event-card {
   }
   body > section.shows .shows-poster {
     padding-bottom: 0;
-    margin-bottom: 0;
   }
   body > section.shows .shows-poster a {
     display: block;
