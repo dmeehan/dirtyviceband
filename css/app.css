@@ -527,8 +527,7 @@ body > section > h2 {
   margin: 0;
 }
 body > section.about {
-  margin: 0.75em 0;
-  margin-bottom: 0;
+  margin: 0.75em 0.75em 0 0.75em;
   background: #F1F1E6;
   padding-bottom: 3.5rem;
 }
@@ -621,10 +620,8 @@ body > section.about .about-text {
 }
 @media screen and (min-width: 1280px) {
   body > section.about {
-    margin-right: auto;
-    margin-left: auto;
     padding: 1.5em;
-    margin-bottom: 1.5em;
+    margin: 3em auto 1.5em auto;
   }
 }
 body > section.video {
@@ -656,7 +653,7 @@ body > section.video .video-container iframe {
   }
 }
 body > section.shows {
-  margin: 0.75em;
+  margin: 0.75em 0.75em 0 0.75em;
 }
 body > section.shows h2 {
   color: #DDD;
@@ -790,7 +787,7 @@ body > section.shows .shows-cards--past .event .event-card {
 }
 @media screen and (min-width: 1280px) {
   body > section.shows {
-    margin: 3em auto;
+    margin: 3em auto 0 3em;
   }
 }
 @media screen and (min-width: 1024px) {
