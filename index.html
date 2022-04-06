@@ -186,10 +186,10 @@
         }
 
         $(window).scroll(function() {    
-            //if(isScrolledIntoView($('#shows'))) {
-            //   $('.section-links a').removeClass('is-active');
-            //   $('.section-links a[href="#shows"]').addClass('is-active');
-            //} else 
+            if(isScrolledIntoView($('#shows'))) {
+               $('.section-links a').removeClass('is-active');
+               $('.section-links a[href="#shows"]').addClass('is-active');
+            } else 
             if(isScrolledIntoView($('#music'))) {
                 $('.section-links a').removeClass('is-active');
                 $('.section-links a[href="#music"]').addClass('is-active');
