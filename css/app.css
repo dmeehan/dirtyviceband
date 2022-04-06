@@ -787,7 +787,7 @@ body > section.shows .shows-cards--past .event .event-card {
 }
 @media screen and (min-width: 1280px) {
   body > section.shows {
-    margin: 3em auto 0 3em;
+    margin: 3em auto 0 auto;
   }
 }
 @media screen and (min-width: 1024px) {
