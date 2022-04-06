@@ -67,8 +67,8 @@
                         <span class="event-day">25</span>
                     </div>
                     <div class="event-details">
-                        <h1>Dive</a></h1>
-                        <p><strong>Kismet, NY
+                        <h1><a target="_blank" href="https://divekismet.com/">Dive</a></h1>
+                        <p><strong>Saturday &#183; Kismet, NY
                         </strong></p>
                     </div>
                 </div>
@@ -80,7 +80,7 @@
                         <span class="event-day">24</span>
                     </div>
                     <div class="event-details">
-                        <h1>Schooner's</h1>
+                        <h1><a target="_blank" href="https://www.schoonerinnfireisland.com/">The Schooner Inn</a></h1>
                         <p><strong>Ocean Bay Park, NY
                         </strong></p>
                     </div>
@@ -95,7 +95,7 @@
                         <span class="event-day">30</span>
                     </div>
                     <div class="event-details">
-                        <h1>Kismet Inn</h1>
+                        <h1><a target="_blank" href="https://www.instagram.com/thekismetinn/?hl=en">Kismet Inn</a></h1>
                         <p><strong>Kismet, NY
                         </strong></p>
                     </div>
@@ -121,7 +121,7 @@
                         <span class="event-day">19</span>
                     </div>
                     <div class="event-details">
-                        <h1>Castaway's</h1>
+                        <h1><a target="_blank" href="https://www.castawaybarandgrill.com/">Castaway Bar &amp; Grill</a></h1>
                         <p><strong>Ocean Beach, NY
                         </strong></p>
                     </div>
@@ -155,6 +155,7 @@
         $(function() {
           $('a[href*="#"]:not([href="#"])').click(function() {
             $('.js-menu').removeClass('is-active');
+            $(this).addClass('is-active');
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
               var target = $(this.hash);
               target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
