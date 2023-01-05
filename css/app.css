@@ -622,7 +622,6 @@ body > section.about .about-text {
   body > section.about {
     padding: 1.5em;
     margin: 3em auto 1.5em auto;
-    margin-bottom: 10.5rem;
   }
 }
 body > section.video {
@@ -875,5 +874,6 @@ body > footer {
 @media screen and (min-width: 1280px) {
   body > footer {
     margin: 0.75em auto;
+    margin-bottom: 10.5rem;
   }
 }
