@@ -790,6 +790,11 @@ body > section.shows .shows-cards--past .event .event-card {
     margin: 7.5em auto 0 auto;
   }
 }
+
+.past {
+  opacity: 50%;
+}
+
 @media screen and (min-width: 1024px) {
   body > section.shows {
     display: -webkit-box;
