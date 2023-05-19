@@ -647,11 +647,6 @@ body > section.video .video-container iframe {
 }
 
 @media screen and (min-width: 1280px) {
-  body > section:first-child {
-    margin-top: 7.5rem;
-  }
-}
-@media screen and (min-width: 1280px) {
   body > section.video {
     margin-right: auto;
     margin-left: auto;
@@ -792,7 +787,7 @@ body > section.shows .shows-cards--past .event .event-card {
 }
 @media screen and (min-width: 1280px) {
   body > section.shows {
-    margin: 3em auto 0 auto;
+    margin: 7.5em auto 0 auto;
   }
 }
 @media screen and (min-width: 1024px) {
