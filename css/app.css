@@ -645,9 +645,14 @@ body > section.video .video-container iframe {
   margin: 0;
   padding: 0;
 }
+
+@media screen and (min-width: 1280px) {
+  body > section:first-child {
+    margin-top: 7.5rem;
+  }
+}
 @media screen and (min-width: 1280px) {
   body > section.video {
-    margin-top: 7.5em;
     margin-right: auto;
     margin-left: auto;
   }
