@@ -1,0 +1,9 @@
+[build]
+  # Static site: HTML/CSS/images are committed directly, nothing to compile.
+  publish = "."
+  command = "echo 'No build step — static site'"
+
+[build.environment]
+  # Pin a modern Node so Netlify's build plugins (which need >=20.11) install.
+  # Overrides any stale NODE_VERSION set in the Netlify UI.
+  NODE_VERSION = "20"
