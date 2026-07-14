@@ -575,7 +575,7 @@ body > section.shows .event:last-child {
 body > section.shows .event .event-card {
   display: flex;
   flex: 1;
-  align-items: flex-sta;
+  align-items: flex-start;
   background: #F1F1E6;
   padding: 0.75em;
 }

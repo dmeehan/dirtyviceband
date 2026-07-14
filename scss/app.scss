@@ -333,7 +333,7 @@ body {
                     //border-radius: $base-border-radius;
                     display: flex;
                     flex: 1;
-                    align-items: flex-sta; // NOTE: pre-existing typo (should be flex-start); invalid value is ignored by browsers
+                    align-items: flex-start;
                     //background: $light-gray;
                     background: #F1F1E6;
                     padding: $small-spacing;
