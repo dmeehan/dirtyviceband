@@ -1,12 +1,8 @@
-// Bitters 1.0.0
-// http://bitters.bourbon.io
-// Copyright 2013-2015 thoughtbot, inc.
-// MIT License
+// Base styles (originally Bitters 1.0.0, de-Bourboned).
+// Aggregates the base partials; each partial pulls in variables itself.
 
-@import "variables";
-
-@import "buttons";
-@import "forms";
-@import "lists";
-@import "tables";
-@import "typography";
+@use "buttons";
+@use "forms";
+@use "lists";
+@use "tables";
+@use "typography";

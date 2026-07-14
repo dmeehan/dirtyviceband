@@ -1,6 +1,7 @@
-/* libraries */
-@import "bourbon/bourbon"; /* sass mixins */
-@import "base/base"; /* base styles */
+@use "sass:math";
+@use "sass:color";
+@use "base/variables" as *;
+@use "base/base";
 
 body {
     //background: #2B2B2B;
@@ -18,20 +19,20 @@ body {
         z-index: 10;
         padding: $small-spacing;
         //background: #1A1A1A;
-        background: shade($dvb-navy-blue, 30%);
+        background: color.mix(#000, $dvb-navy-blue, 30%);
 
         @media screen and (min-width: 768px) {
-            padding: $base-spacing/1.5 $base-spacing;
+            padding: math.div($base-spacing, 1.5) $base-spacing;
         }
 
         @media screen and (min-width: 1280px) {
-            margin: 0 auto; 
-            padding: $base-spacing/1.5 0;
+            margin: 0 auto;
+            padding: math.div($base-spacing, 1.5) 0;
         }
 
         > nav {
-            @include display(flex);
-            @include align-items(center);
+            display: flex;
+            align-items: center;
             max-width: 1280px;
             //margin: auto;
             padding: 0;
@@ -54,9 +55,9 @@ body {
             }
 
             > ul {
-                @include display(flex);
-                @include align-items(center);
-                @include justify-content(center);
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 > li {
                     margin: 0;
@@ -67,7 +68,7 @@ body {
                         font-size: 1em;
                         font-weight: bold;
                         color: $medium-gray;
-                        padding: .5em 1em; 
+                        padding: .5em 1em;
 
                         &:link, &:visited {
                             color: $medium-gray;
@@ -87,7 +88,7 @@ body {
 
                         &.is-active {
                             color: $extra-light-gray;
-                            background: transparentize(white, 0.8);
+                            background: color.adjust(white, $alpha: -0.8);
                             border-radius: .25em;
                         }
                     }
@@ -100,8 +101,8 @@ body {
                     right: -100%;
                     overflow: hidden;
                     width: 100%;
-                    @include transition(all .25s ease-in-out);
-                    background: transparentize($dvb_navy_blue, 0.05);
+                    transition: all .25s ease-in-out;
+                    background: color.adjust($dvb-navy-blue, $alpha: -0.05);
                     padding: $small-spacing;
 
                     > li {
@@ -110,19 +111,19 @@ body {
 
                     @media screen and (min-width: 768px) {
                         position: static;
-                        @include flex(1);
-                        @include justify-content(flex-end);
+                        flex: 1;
+                        justify-content: flex-end;
                         margin: 0 $base-spacing;
-                        @include display(flex);
+                        display: flex;
                         background: transparent;
                     }
 
                     @media screen and (min-width: 1024px) {
-                        @include justify-content(center);
+                        justify-content: center;
                     }
 
                     @media screen and (min-width: 1280px) {
-                        @include justify-content(center);
+                        justify-content: center;
                         > li {
                             padding: 0 $base-spacing;
                         }
@@ -136,7 +137,7 @@ body {
             }
 
             .menu-trigger {
-                @include flex(none);
+                flex: none;
                 margin-left: auto;
                 padding: 0 $small-spacing;
                 background: transparent;
@@ -160,15 +161,15 @@ body {
             }
         }
 
-        
+
 
         .contact-links {
-            @include display(flex);
-            @include align-items(center);
-            @include justify-content(center);
+            display: flex;
+            align-items: center;
+            justify-content: center;
 
             > li {
-                margin: 0 $small-spacing/2;
+                margin: 0 math.div($small-spacing, 2);
             }
 
             i {
@@ -180,9 +181,9 @@ body {
                 bottom: 0;
                 left: 0;
                 width: 100%;
-                background: shade($dvb-navy-blue, 30%);
-                padding: $base-spacing/1.5 0;
-                @include justify-content(space-around);
+                background: color.mix(#000, $dvb-navy-blue, 30%);
+                padding: math.div($base-spacing, 1.5) 0;
+                justify-content: space-around;
             }
         }
     }
@@ -192,7 +193,7 @@ body {
         box-sizing: border-box;
         //margin: $small-spacing;
         padding: 0;
-        
+
 
         > h2 {
             text-align: center;
@@ -200,31 +201,30 @@ body {
         }
 
         &.about {
-            margin: $small-spacing 0;
-            margin-bottom: 0;
+            margin: $small-spacing $small-spacing 0 $small-spacing;
             //background: $light-gray;
             background: #F1F1E6;
             padding-bottom: 3.5rem;
 
             .about-bio {
                 padding: $small-spacing;
-                @include display(flex);
-                @include flex-direction(column);
-                @include align-items(center);
-                @include justify-content(center);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
                 //margin: $base-spacing*2 0;
 
                 @media screen and (min-width: 1024px) {
-                    @include flex-direction(row);
+                    flex-direction: row;
                 }
             }
 
             .about-logo {
                 margin: $base-spacing 0;
-                
+
                 order: 1;
                 text-align: center;
-                
+
                 img {
                     display: inline-block;
                     width: 80%;
@@ -234,7 +234,7 @@ body {
 
                 @media screen and (min-width: 1024px) {
                     order: 0;
-                    @include flex(2);
+                    flex: 2;
                 }
 
             }
@@ -243,20 +243,18 @@ body {
                 order: 0;
                 font-size: 0.75em;
                 text-align: justify;
-                
+
 
                 @media screen and (min-width: 1024px) {
                     order: 1;
-                    @include flex(3);
+                    flex: 3;
                     font-size: 0.875em;
                 }
             }
 
             @media screen and (min-width: 1280px) {
-                margin-right: auto;
-                margin-left: auto;
                 padding: $base-spacing;
-                margin-bottom: $base-spacing;
+                margin: $base-spacing*2 auto $base-spacing auto;
             }
         }
 
@@ -272,7 +270,7 @@ body {
                 padding-bottom: 56.25%;
                 max-height: 720px;
                 //padding-bottom: 43%;
-                
+
                 iframe {
                     position: absolute;
                     height: 100%;
@@ -282,19 +280,18 @@ body {
                     margin: 0;
                     padding: 0;
                 }
-            }  
+            }
 
             @media screen and (min-width: 1280px) {
-                margin-top: $base-spacing*2 + 4.5em;
                 margin-right: auto;
                 margin-left: auto;
             }
         }
 
         &.shows {
-            margin: $small-spacing;
-            //@include display(flex);
-            //@include flex-wrap(wrap);
+            margin: $small-spacing $small-spacing 0 $small-spacing;
+            //display: flex;
+            //flex-wrap: wrap;
 
             h2 {
                 color: $light-gray;
@@ -334,9 +331,9 @@ body {
 
                 .event-card {
                     //border-radius: $base-border-radius;
-                    @include display(flex);
-                    @include flex(1);
-                    @include align-items(flex-sta);
+                    display: flex;
+                    flex: 1;
+                    align-items: flex-sta; // NOTE: pre-existing typo (should be flex-start); invalid value is ignored by browsers
                     //background: $light-gray;
                     background: #F1F1E6;
                     padding: $small-spacing;
@@ -344,10 +341,10 @@ body {
                 }
 
                 .event-date {
-                    @include display(flex);
-                    @include flex-direction(column);
-                    @include justify-content(flex-start);
-                    @include align-items(center);
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: flex-start;
+                    align-items: center;
                     width: 3.5em;
                     text-align: center;
                     padding-right: $base-spacing;
@@ -359,7 +356,7 @@ body {
                 }
 
                 .event-day {
-                    //@include flex(none);
+                    //flex: none;
                     //font-size: 5em;
                     line-height: 1;
                     color: $medium-gray;
@@ -375,7 +372,7 @@ body {
                 }
 
                 @media screen and (min-width: 1280px) {
-                    //@include flex(0 0 50%);
+                    //flex: 0 0 50%;
                     //margin-bottom: $base-spacing;
 
                     &:nth-child(2n) {
@@ -384,9 +381,9 @@ body {
 
                     .event-card {
                         padding: $base-spacing;
-                        //@include flex(1);
-                        //@include justify-content(stretch);
-                        //@include align-items(stretch);
+                        //flex: 1;
+                        //justify-content: stretch;
+                        //align-items: stretch;
                     }
 
                     .event-date {
@@ -401,7 +398,7 @@ body {
                         font-size: 1em;
                         h1 {
                             font-size: 1.3125rem;
-                            margin-bottom: $small-spacing/2;
+                            margin-bottom: math.div($small-spacing, 2);
                         }
                     }
 
@@ -412,25 +409,25 @@ body {
             .shows-cards--past {
                 .event {
                     .event-card {
-                        background: darken($light-gray, 15%) !important;
+                        background: color.adjust($light-gray, $lightness: -15%) !important;
                     }
                 }
-                
+
             }
 
             @media screen and (min-width: 1280px) {
-                margin: $base-spacing*2 auto;
+                margin: (2 * $base-spacing + 4.5em) auto 0 auto;
             }
 
             @media screen and (min-width: 1024px) {
-                @include display(flex);
-                @include flex-wrap(wrap);
-                @include flex(1);
+                display: flex;
+                flex-wrap: wrap;
+                flex: 1;
 
                 .shows-poster, .shows-cards {
                     box-sizing: border-box;
                     width: 100%;
-                    //@include flex(0 0 50%);
+                    //flex: 0 0 50%;
 
                 }
 
@@ -451,13 +448,13 @@ body {
                     //padding-left: $small-spacing;
 
 
-                    @include display(flex);
-                    @include flex-wrap(wrap);
-                    //@include flex-direction(column);
+                    display: flex;
+                    flex-wrap: wrap;
+                    //flex-direction: column;
 
                     .event {
-                        @include display(flex);
-                        @include flex(1 0 33%);
+                        display: flex;
+                        flex: 1 0 33%;
                         //padding-bottom: $small-spacing;
                         padding-right: $small-spacing;
                         padding-bottom: 0;
@@ -490,18 +487,15 @@ body {
 
         @media screen and (min-width: 1280px) {
             margin: $small-spacing auto;
+            // Clears the fixed contact bar at the bottom on desktop.
+            margin-bottom: 10.5rem;
         }
     }
 
 }
 
-
-
-
-
-
-
-
-
-
-
+// Dims past events. Ported from a hand-edit that lived only in the compiled
+// css (the scss pipeline had been broken); .past is used throughout index.html.
+.past {
+    opacity: 50%;
+}

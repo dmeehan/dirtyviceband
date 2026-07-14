@@ -1,12 +1,11 @@
 {
   "name": "dirtyviceband.com",
   "version": "0.1.0",
-  "devDependencies": {
-    "browser-sync": "^2.24.4",
-    "gulp": "^3.9.1",
-    "gulp-ruby-sass": "^2.1.1"
+  "scripts": {
+    "build": "sass scss/app.scss css/app.css --style=expanded --no-source-map",
+    "watch": "sass scss/app.scss css/app.css --style=expanded --no-source-map --watch"
   },
-  "dependencies": {
-    "npm": "^6.1.0"
+  "devDependencies": {
+    "sass": "^1.101.0"
   }
 }

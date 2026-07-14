@@ -1,6 +1,14 @@
-#{$all-button-inputs},
+@use "sass:color";
+@use "variables" as *;
+
+// Was Bourbon's $all-button-inputs.
+button,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
 button, .button {
-  @include appearance(none);
+  -webkit-appearance: none;
+  appearance: none;
   -webkit-font-smoothing: antialiased;
   background-color: $base-button-color;
   border-radius: $base-border-radius;
@@ -21,7 +29,7 @@ button, .button {
 
   &:hover,
   &:focus {
-    background-color: darken($action-color, 15%);
+    background-color: color.adjust($action-color, $lightness: -15%);
     color: #fff;
   }
 

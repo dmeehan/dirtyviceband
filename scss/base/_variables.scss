@@ -1,9 +1,13 @@
+@use "sass:math";
+@use "sass:color";
+
 // Layout
 $navigation-height: 60px;
 $footer-height: 60px;
 
 // Typography
-$base-font-family: $helvetica;
+// Was Bourbon's $helvetica stack (customized here to include Roboto).
+$base-font-family: "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
 $heading-font-family: $base-font-family;
 
 // Font Sizes
@@ -17,23 +21,23 @@ $heading-line-height: 1.2;
 // Other Sizes
 $base-border-radius: 3px;
 $base-spacing: $base-line-height * 1em;
-$small-spacing: $base-spacing / 2;
+$small-spacing: math.div($base-spacing, 2);
 $base-z-index: 0;
 
 // Colors
 $blue: #5E717D;
-$dark-blue: darken($blue, 25);
-$medium-blue: lighten($blue, 15);
-$light-blue: lighten($blue, 40);
+$dark-blue: color.adjust($blue, $lightness: -25%);
+$medium-blue: color.adjust($blue, $lightness: 15%);
+$light-blue: color.adjust($blue, $lightness: 40%);
 $accent-blue: #85AEC9;
 $tan: #C9C5A2;
-$dark-tan: darken($tan, 15);
-$medium-tan: lighten($tan, 5);
-$light-tan: lighten($tan, 15);
+$dark-tan: color.adjust($tan, $lightness: -15%);
+$medium-tan: color.adjust($tan, $lightness: 5%);
+$light-tan: color.adjust($tan, $lightness: 15%);
 $dark-gray: #333;
 $medium-gray: #999;
 $light-gray: #DDD;
-$extra-light-gray: lighten($light-gray, 10);
+$extra-light-gray: color.adjust($light-gray, $lightness: 10%);
 $light-red: #EE3C23;
 $light-yellow: #FFF6BF;
 $light-green: rgb(96, 133, 78);
@@ -41,7 +45,7 @@ $green: #669900;
 $red: #993333;
 $yellow: #d6de23;
 $orange: #e49b3c;
-$light-orange: lighten($orange, 15);
+$light-orange: color.adjust($orange, $lightness: 15%);
 
 $dvb-navy-blue: #00303c;
 
@@ -49,13 +53,13 @@ $dvb-navy-blue: #00303c;
 // Font Colors
 $base-background-color: #fff;
 $base-font-color: $dark-gray;
-$heading-font-color: transparentize($base-font-color, 0.3);
+$heading-font-color: color.adjust($base-font-color, $alpha: -0.3);
 //$action-color: #d40000;
 $action-color: #639ecb;
 
 // Flash Colors
-$success-color: lighten($light-green, 25);
-$notice-color: lighten($light-blue, 10);
+$success-color: color.adjust($light-green, $lightness: 25%);
+$notice-color: color.adjust($light-blue, $lightness: 10%);
 $warning-color: $light-yellow;
 $error-color: $light-orange;
 
@@ -70,6 +74,5 @@ $base-border: 1px solid $base-border-color;
 
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
-$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($action-color, $lightness: -5%, $alpha: -0.3);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px color.adjust($action-color, $lightness: -5%, $alpha: -0.3);
 $form-label-color: $medium-gray;
-

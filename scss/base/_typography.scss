@@ -1,5 +1,8 @@
+@use "sass:color";
+@use "variables" as *;
+
 body {
-  @include font-feature-settings("kern", "liga", "pnum");
+  font-feature-settings: "kern", "liga", "pnum";
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
   font-family: $base-font-family;
@@ -44,7 +47,7 @@ a {
   &:active,
   &:focus,
   &:hover {
-    color: darken($action-color, 15%);
+    color: color.adjust($action-color, $lightness: -15%);
   }
 
   &:active,
